@@ -1,9 +1,17 @@
 var angular = require('angular');
 
-var hello = require('./app/hello');
-require('angular-ui-router');
+// views
+var hello = require('./app/views/main/hello');
+
+// components
+
+// routes
 var routesConfig = require('./routes');
 
+require('angular-ui-router');
+
+// styles
+require('bootstrap/dist/css/bootstrap.css');
 require('./index.scss');
 
 var app = 'app';
