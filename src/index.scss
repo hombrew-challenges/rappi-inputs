@@ -1,13 +1,11 @@
 body {
 
+  .testcase-list-item {
+    margin-bottom: 20px;
+  }
+
   .rioperation {
-    &:last-child {
-      &:after {
-        content: "*";
-        visibility: hidden;
-        clear: both;
-      }
-    }
+    margin-bottom: 5px;
   }
 
   .operation-dropdown-button {

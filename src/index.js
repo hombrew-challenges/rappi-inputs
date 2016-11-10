@@ -3,6 +3,8 @@ var angular = require('angular');
 // libs
 require('angular-ui-router');
 require('angular-ui-bootstrap');
+require('angular-animate');
+require('angular-toastr');
 
 // views
 var main = require('./app/views/main/main');
@@ -17,13 +19,14 @@ var routesConfig = require('./routes');
 
 // styles
 require('bootstrap/dist/css/bootstrap.css');
+require('angular-toastr/dist/angular-toastr.css');
 require('./index.scss');
 
 var app = 'app';
 module.exports = app;
 
 angular
-  .module(app, ['ui.router', 'ui.bootstrap'])
+  .module(app, ['ui.router', 'ui.bootstrap', 'ngAnimate', 'toastr'])
   .config(routesConfig)
 
   // views

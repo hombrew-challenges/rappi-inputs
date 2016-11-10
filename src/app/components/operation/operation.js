@@ -18,13 +18,11 @@ OperationController.$inject = [];
 function OperationController() {
   var op = this;
 
-  // op.$log = $log;
   // view model
   op.activeOption = 'UPDATE';
   op.placeholders = ['x', 'y', 'z', 'W'];
   op.value = [1, 1, 1, 0];
   op.changeCurrentOperation = changeCurrentOperation;
-  // $log.log('epale');
 
   function changeCurrentOperation() {
     var i;
