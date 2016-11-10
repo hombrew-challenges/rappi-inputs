@@ -29,3 +29,18 @@
   </div>
 
 </div>
+
+
+<div
+  class="rioperation"
+  ng-if="tc.testcase.operations"
+  ng-repeat="currentOperation in tc.testcase.operations track by $index"
+  >
+  <ri-operation
+    operation="tc.testcase.operations[$index]"
+    n="tc.testcase.n"
+    tcindex="tc.index"
+    opindex="$index"
+    >
+  </ri-operation>
+</div>

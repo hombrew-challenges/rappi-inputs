@@ -1,3 +1,16 @@
 body {
-  background-color: lightgrey;
+
+  .rioperation {
+    &:last-child {
+      &:after {
+        content: "*";
+        visibility: hidden;
+        clear: both;
+      }
+    }
+  }
+
+  .operation-dropdown-button {
+    width: 95px;
+  }
 }

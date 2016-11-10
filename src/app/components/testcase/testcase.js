@@ -5,15 +5,15 @@ module.exports = {
   controllerAs: 'tc',
   controller: TestcaseController,
   bindings: {
-    testcase: '='
+    testcase: '=',
+    index: '<'
   }
 };
 
 TestcaseController.$inject = [
-  '$scope',
-  '$log'
+  '$scope'
 ];
-function TestcaseController($scope, $log) {
+function TestcaseController($scope) {
   var tc = this;
 
   // view model
@@ -34,7 +34,5 @@ function TestcaseController($scope, $log) {
     } else if (next < prev) {
       tc.testcase.operations.splice(next, prev - next);
     }
-
-    $log.log(tc.testcase);
   });
 }

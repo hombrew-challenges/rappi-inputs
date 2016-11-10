@@ -1,0 +1,10 @@
+<input
+  placeholder="{{oi.placeholder}}"
+  type="number"
+  min="{{ oi.placeholder !== 'W' ? 1 : 0 }}"
+  max="{{ oi.placeholder !== 'W' ? oi.n : '' }}"
+  class="form-control"
+  aria-label="..."
+  style="width:15%;"
+  ng-model="oi.value"
+  >

@@ -22,7 +22,7 @@
           <li class="list-group-item testcase-list-item" ng-repeat="currentTestcase in mn.testcases track by $index">
             Testcase {{$index + 1}}
             <br/>
-            <ri-testcase testcase="currentTestcase"></ri-testcase>
+            <ri-testcase testcase="currentTestcase" index="$index"></ri-testcase>
           </li>
         </ul>
       </div>
