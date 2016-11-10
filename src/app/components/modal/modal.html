@@ -1,0 +1,18 @@
+<div class="modal-header">
+  <h3 class="modal-title" id="modal-title">Testcases Results</h3>
+</div>
+
+<div class="modal-body" id="modal-body">
+  <div ng-repeat="result in rm.resolve.results track by $index">
+    Testcase {{$index + 1}} query operations results
+    <ul class="list-group">
+      <li class="list-group-item" ng-repeat="testcase in result track by $index">{{testcase}}</li>
+    </ul>
+    <br>
+  </div>
+</div>
+
+<div class="modal-footer">
+  <button class="btn btn-primary" type="button" ng-click="rm.ok()">Start Again</button>
+  <button class="btn btn-warning" type="button" ng-click="rm.cancel()">Edit Request</button>
+</div>

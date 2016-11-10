@@ -27,8 +27,9 @@
         </ul>
       </div>
 
-      <button type="submit" class="btn btn-success submit-button">Submit</button>
+      <button type="submit" class="btn btn-success submit-button" ng-disabled="mn.disabledSubmit">Submit</button>
     </form>
   </div>
 
+  <div class="loader" ng-if="mn.disabledSubmit"></div>
 </div>

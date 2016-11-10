@@ -1,3 +1,4 @@
+require('jquery');
 var angular = require('angular');
 
 // libs
@@ -5,6 +6,10 @@ require('angular-ui-router');
 require('angular-ui-bootstrap');
 require('angular-animate');
 require('angular-toastr');
+require('angular-spinner');
+
+// config
+var routesConfig = require('./routes');
 
 // views
 var main = require('./app/views/main/main');
@@ -13,9 +18,7 @@ var main = require('./app/views/main/main');
 var testcase = require('./app/components/testcase/testcase');
 var operation = require('./app/components/operation/operation');
 var opInput = require('./app/components/op-input/op-input');
-
-// routes
-var routesConfig = require('./routes');
+var modal = require('./app/components/modal/modal');
 
 // styles
 require('bootstrap/dist/css/bootstrap.css');
@@ -26,7 +29,7 @@ var app = 'app';
 module.exports = app;
 
 angular
-  .module(app, ['ui.router', 'ui.bootstrap', 'ngAnimate', 'toastr'])
+  .module(app, ['ui.router', 'ui.bootstrap', 'ngAnimate', 'toastr', 'angularSpinner'])
   .config(routesConfig)
 
   // views
@@ -35,4 +38,5 @@ angular
   // components
   .component('riTestcase', testcase)
   .component('riOperation', operation)
-  .component('riOpInput', opInput);
+  .component('riOpInput', opInput)
+  .component('riModal', modal);
