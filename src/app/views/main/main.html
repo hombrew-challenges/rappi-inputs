@@ -1,0 +1,34 @@
+<div class="container">
+
+  <div class="col-xs-12">
+    <form ng-submit="mn.submit()">
+
+      <div class="row">
+        <div class="form-group">
+          <label for="testcaseQuantity">Testcases Quantity</label>
+          <input
+            id="testcaseQuantity"
+            type="number"
+            min="1"
+            class="form-control"
+            placeholder="Testcases Quantity"
+            ng-model="mn.testcaseQuantity"
+            />
+        </div>
+      </div>
+
+      <div class="row">
+        <ul class="list-group"ng-if="mn.testcases">
+          <li class="list-group-item testcase-list-item" ng-repeat="currentTestcase in mn.testcases track by $index">
+            Testcase {{$index + 1}}
+            <br/>
+            <ri-testcase testcase="currentTestcase"></ri-testcase>
+          </li>
+        </ul>
+      </div>
+
+      <button type="submit" class="btn btn-success submit-button">Submit</button>
+    </form>
+  </div>
+
+</div>
