@@ -7,9 +7,9 @@ Frontend de la prueba para Rappi
 -------------
  > Para poder descargar las dependencias del frontend, debe tener instalado en su computador [nodejs y npm](https://nodejs.org/en/)
 
- Clone este repositorio y diríjase en la carpeta creada, luego ejecute `npm install`.
+ Clone este repositorio y diríjase a la carpeta creada, luego ejecute `npm install`.
 
  2. Ejecución
 -------------
 
-Dentro de la carpeta clonada, ejecute `npm run serve`. En caso de error, ejecute `npm run build && npm run serve`. Luego, en su explorador diríjase a la dirección http://localhost:3000/. En dicha dirección podrá encontrar las instrucciones de uso.
+Dentro de la carpeta clonada, ejecute `npm run serve`. En caso de error, ejecute `npm run build && npm run serve`. Luego, en su explorador diríjase a la dirección [http://localhost:3000/](http://localhost:3000/). En dicha dirección podrá encontrar las instrucciones de uso.
