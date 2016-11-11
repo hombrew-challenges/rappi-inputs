@@ -17,7 +17,8 @@ var main = require('./app/views/main/main');
 var testcase = require('./app/components/testcase/testcase');
 var operation = require('./app/components/operation/operation');
 var opInput = require('./app/components/op-input/op-input');
-var modal = require('./app/components/modal/modal');
+var responseModal = require('./app/components/response-modal/response-modal');
+var instructionsModal = require('./app/components/instructions-modal/instructions-modal');
 
 // styles
 require('bootstrap/dist/css/bootstrap.css');
@@ -38,4 +39,5 @@ angular
   .component('riTestcase', testcase)
   .component('riOperation', operation)
   .component('riOpInput', opInput)
-  .component('riModal', modal);
+  .component('riResponseModal', responseModal)
+	.component('riInstructionsModal', instructionsModal);

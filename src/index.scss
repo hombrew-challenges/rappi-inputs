@@ -5,6 +5,16 @@ body {
 
 	}
 
+	.content {
+		width: 80%;
+		margin: 0 auto;
+		text-align: justify;
+		br {
+			margin-bottom: 10px;
+		}
+
+	}
+
   .testcase-list-item {
     margin-bottom: 20px;
   }

@@ -1,7 +1,7 @@
 module.exports = {
-  template: require('./modal.html'),
+  template: require('./instructions-modal.html'),
   controllerAs: 'rm',
-  controller: ResponseModalController,
+  controller: InstructionsModalController,
   bindings: {
     resolve: '<',
     close: '&',
@@ -10,13 +10,13 @@ module.exports = {
 };
 
 /**
- * Response Modal Component Controller.
+ * Instructions Modal Component Controller.
  * @return void.
  */
-function ResponseModalController() {
+function InstructionsModalController() {
 }
 
-ResponseModalController.prototype = {
+InstructionsModalController.prototype = {
 
   ok: function () {
     this.close();

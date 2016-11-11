@@ -98,7 +98,7 @@ MainController.prototype = {
             mn.disabledSubmit = false;
             var modalInstance = mn.$uibModal.open({
               animation: true,
-              component: 'riModal',
+              component: 'riResponseModal',
               resolve: {
                 results: function () {
                   return response.data;
@@ -120,5 +120,12 @@ MainController.prototype = {
           }
         );
     }
+  },
+
+  openInstructionsModal: function () {
+    this.$uibModal.open({
+      animation: true,
+      component: 'riInstructionsModal'
+    });
   }
 };

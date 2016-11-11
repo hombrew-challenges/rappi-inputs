@@ -1,0 +1,28 @@
+<div class="modal-header">
+  <h3 class="modal-title" id="modal-title">Instructions for <b>Cube Summation</b></h3>
+</div>
+
+<div class="modal-body" id="modal-body">
+	<div class="content">
+		You are given a 3-D Matrix in which each block contains 0 initially. The first block is defined by the coordinate (1,1,1) and the last block is defined by the coordinate (N,N,N). There are two types of queries:<br/>
+		<code>UPDATE x y z W</code> updates the value of block (x,y,z) to W.<br/>
+		<code>QUERY x1 y1 z1 x2 y2 z2</code> calculates the sum of the value of blocks whose x coordinate is between x1 and x2 (inclusive), y coordinate between y1 and y2 (inclusive) and z coordinate between z1 and z2 (inclusive).<br/>
+		<b>Input Format</b> <br/>
+		The first line contains an integer T (Testcases Quantity), the number of test-cases. T testcases follow. For each test case, the first line will contain two integers N (Matrix Side Length) and M (Operation Quantity) separated by a single space.<br/>
+		N defines the N * N * N matrix.<br/>
+		M defines the number of operations.<br/>
+		The next M lines will contain either<br/>
+		<code>
+			<ol>
+				<li>UPDATE x y z W</li>
+				<li>QUERY  x1 y1 z1 x2 y2 z2 </li>
+			</ol>
+		</code>
+		<b>Output Format</b> <br/>
+		Print the result for each QUERY.
+	</div>
+</div>
+
+<div class="modal-footer">
+  <button class="btn btn-warning" type="button" ng-click="rm.cancel()">Close</button>
+</div>
