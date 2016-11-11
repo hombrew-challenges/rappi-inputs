@@ -1,6 +1,16 @@
+<div class="full-width" ng-if="mn.disabledSubmit">
+	<div class="loader-container">
+		<div class="loader-wrapper">
+			<div class="loader"></div>
+		</div>
+	</div>
+</div>
+
 <div class="container">
 
-  <div class="col-xs-12">
+	<img class="logo img-responsive" src="/assets/images/rappi-logo.png" alt="logo" />
+
+  <div class="col-xs-12 col-md-10 col-md-offset-1">
     <form ng-submit="mn.submit()">
 
       <div class="row">
@@ -27,9 +37,11 @@
         </ul>
       </div>
 
-      <button type="submit" class="btn btn-success submit-button" ng-disabled="mn.disabledSubmit">Submit</button>
+			<div class="text-center submit-button-container">
+				<button type="submit" class="btn btn-success" ng-disabled="mn.disabledSubmit">Submit</button>
+			</div>
     </form>
   </div>
 
-  <div class="loader" ng-if="mn.disabledSubmit"></div>
+
 </div>

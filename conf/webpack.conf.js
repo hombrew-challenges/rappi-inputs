@@ -68,10 +68,5 @@ module.exports = {
     path: path.join(process.cwd(), conf.paths.tmp),
     filename: 'index.js'
   },
-  entry: `./${conf.path.src('index')}`,
-  resolve: {
-    alias: {
-      spin: 'spin.js'
-    }
-  }
+  entry: `./${conf.path.src('index')}`
 };

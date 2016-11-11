@@ -13,11 +13,13 @@ module.exports = {
 TestcaseController.$inject = [
   '$scope'
 ];
+/**
+ * Testcase Component Controller.
+ * @param {$scope} $scope: this controller scope.
+ * @return void.
+ */
 function TestcaseController($scope) {
   var tc = this;
-
-  // view model
-  // tc.testcase.m = 1;
 
   $scope.$watch('tc.testcase.m', function (next, prev) {
     var i;

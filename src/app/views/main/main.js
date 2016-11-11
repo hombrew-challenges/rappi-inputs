@@ -10,8 +10,7 @@ MainController.$inject = [
   '$scope',
   'toastr',
   '$http',
-  '$uibModal',
-  '$log'
+  '$uibModal'
 ];
 /**
  * Main Component Controller.
@@ -21,14 +20,13 @@ MainController.$inject = [
  * @param {services} $translate: angular-translate service.l.
  * @return void.
  */
-function MainController($scope, toastr, $http, $uibModal, $log) {
+function MainController($scope, toastr, $http, $uibModal) {
   var mn = this;
 
   // services
   mn.toastr = toastr;
   mn.$http = $http;
   mn.$uibModal = $uibModal;
-  mn.$log = $log;
 
   // view model
   mn.testcaseQuantity = 1;
@@ -63,6 +61,8 @@ MainController.prototype = {
   submit: function () {
     var aux = true;
     var mn = this;
+
+		// verify if form is filled correctly
     if (angular.isUndefined(this.testcaseQuantity) ||
         this.testcaseQuantity === null ||
         this.testcaseQuantity < 1) {
@@ -87,16 +87,15 @@ MainController.prototype = {
     });
 
     if (aux === false) {
-      this.toastr.warning('Complete todos los campos del formulario para poder continuar', 'Advertencia');
+      this.toastr.warning('fill the form to proceed', 'Warning');
     } else {
+			// if everything is ok, send data to the backend
       this.disabledSubmit = true;
       this.$http
         .post('http://rappi-matrix.herokuapp.com/api/testcases', {testcases: mn.testcases})
         .then(
           function (response) {
             mn.disabledSubmit = false;
-            angular.element('.loader').css('opacity', 0);
-
             var modalInstance = mn.$uibModal.open({
               animation: true,
               component: 'riModal',
@@ -113,16 +112,13 @@ MainController.prototype = {
               mn.testcases = [];
               mn.testcases.push({n: 1, m: 1, operations: ['UPDATE 1 1 1 0']});
             });
-
-            mn.$log.log(mn.disabledSubmit);
           },
 
-          function () {
+          function (error) {
             mn.disabledSubmit = false;
-            // mn.toastr.error(error, 'Error');
+            mn.toastr.error(error, 'Error');
           }
         );
-      this.$log.log(mn.disabledSubmit);
     }
   }
 };

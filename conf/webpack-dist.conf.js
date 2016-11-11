@@ -74,10 +74,5 @@ module.exports = {
   entry: {
     app: `./${conf.path.src('index')}`,
     vendor: Object.keys(pkg.dependencies)
-  },
-  resolve: {
-    alias: {
-      spin: 'spin.js'
-    }
   }
 };

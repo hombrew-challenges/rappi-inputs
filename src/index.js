@@ -1,12 +1,11 @@
-require('jquery');
 var angular = require('angular');
 
 // libs
+require('jquery');
 require('angular-ui-router');
 require('angular-ui-bootstrap');
 require('angular-animate');
 require('angular-toastr');
-require('angular-spinner');
 
 // config
 var routesConfig = require('./routes');
@@ -29,7 +28,7 @@ var app = 'app';
 module.exports = app;
 
 angular
-  .module(app, ['ui.router', 'ui.bootstrap', 'ngAnimate', 'toastr', 'angularSpinner'])
+  .module(app, ['ui.router', 'ui.bootstrap', 'ngAnimate', 'toastr'])
   .config(routesConfig)
 
   // views
