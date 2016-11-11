@@ -3,6 +3,8 @@ module.exports = {
   controllerAs: 'rm',
   controller: ResponseModalController,
   bindings: {
+    resolve: '<',
+    close: '&',
     dismiss: '&'
   }
 };
@@ -15,6 +17,10 @@ function ResponseModalController() {
 }
 
 ResponseModalController.prototype = {
+
+  ok: function () {
+    this.close();
+  },
 
   cancel: function () {
     this.dismiss();

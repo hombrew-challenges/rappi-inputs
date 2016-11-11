@@ -3,8 +3,6 @@ module.exports = {
   controllerAs: 'rm',
   controller: InstructionsModalController,
   bindings: {
-    resolve: '<',
-    close: '&',
     dismiss: '&'
   }
 };
@@ -17,10 +15,6 @@ function InstructionsModalController() {
 }
 
 InstructionsModalController.prototype = {
-
-  ok: function () {
-    this.close();
-  },
 
   cancel: function () {
     this.dismiss();
